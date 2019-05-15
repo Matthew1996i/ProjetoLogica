@@ -16,10 +16,11 @@ while True:
     password = str(input('Digite a senha: '))
     print(' ')
     if user != usuarios[0] or password != usuarios[1]:
-        print("***USUARIO OU SENHA INVALIDO***")
+        print('\033[31m'+"***USUARIO OU SENHA INVALIDO***"+'\033[0;0m')
         print('')
     elif user == usuarios[0] and password == usuarios[1]:
-        print("***ACESSO PERMITIDO***\n")
+        print('\033[32m'+"***ACESSO PERMITIDO***"+'\033[0;0m')
+        print('')
         break
 ################################### DEPOIS, DARÁ AS OPÇOES DE ESCOLHAS PARA O USER ##################################
 print('Digite uma opção: \n')
@@ -187,7 +188,7 @@ while True:
                 break
             else:
                 print('='*100)
-                print(' '*30,'RA OU SENHA INVALIDOS... TENTE NOVAMENTE!!!')
+                print(' '*30 + '\033[41;1;37m'+'RA OU SENHA INVALIDOS... TENTE NOVAMENTE!!!'+'\033[0;0m')
                 print('='*100)
 
 ################################### FIM DO CODIGO, USUARIO DECIDE SE IRÁ VOLTAR PARA O LOOP OU NÃO ##################################
