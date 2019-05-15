@@ -40,11 +40,11 @@ while True:
         print('='*100)
         print(' '*30,'FUNCIONARIOS DA FSOCIETY')
         print('='*100)
-        print('')
         
         funcionarios = ['Weslley', 'Thiago', 'Matheus', 'Karol', 'Bruno', 'Dykson']
         for index, i in enumerate(funcionarios):
-            print(f'{index+1}) {i}')
+            print(f'{index+1} {i}')
+            print('='*100)
         print('')
 ################################### ESCOLHA 2 CARGOS DA EMPRESA ##################################
     elif choice == 2:
