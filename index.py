@@ -1,5 +1,6 @@
 ######## Programa de controle de logins dos Funcionarios ####################
 import time
+import getpass
 usuarios = ('admin','admin')
 
 
@@ -13,7 +14,7 @@ while True:
 ################################### CODIGO DE LOGIN DO USUARIO, COM VALIDAÇÃO ##################################
 
     user = str(input('Digite o nome de Usuario: '))
-    password = str(input('Digite a senha: '))
+    password = getpass.getpass('Digite a Senha: ')
     print(' ')
     if user != usuarios[0] or password != usuarios[1]:
         print('\033[31m'+"***USUARIO OU SENHA INVALIDO***"+'\033[0;0m')
@@ -149,7 +150,7 @@ while True:
         time.sleep(3)
         while True:
             login_salario = str(input('Digite o seu RA: '))
-            pass_salario = str(input('Digite sua senha: '))
+            pass_salario = getpass.getpass('Digite sua Senha: ')
             print('')
             print('Buscando seu login... Aguarde!')
             print('')
@@ -192,7 +193,7 @@ while True:
                 print('='*100)
 
 ################################### FIM DO CODIGO, USUARIO DECIDE SE IRÁ VOLTAR PARA O LOOP OU NÃO ##################################
-    print('Retornando ao Menu Inicial...')
+    print('\033[32m'+"Retornando ao Menu Inicial..."+'\033[0;0m')
     print('')
     time.sleep(1.2)
     retorno = str(input('Deseja fazer outra consulta? Y/N '))
